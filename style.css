@@ -1,0 +1,71 @@
+/* Global */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+html,body{height:100%}
+body{
+  background-image: url('bg.webp');
+  background-size:cover;
+  background-position:center center;
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+}
+
+/* Card */
+.container{width:100%;max-width:420px}
+.card{
+  background:linear-gradient(180deg, rgba(4,8,15,0.85), rgba(12,18,25,0.9));
+  border-radius:22px;
+  padding:28px 22px 30px;
+  box-shadow:0 20px 40px rgba(2,6,12,0.7), inset 0 1px 0 rgba(255,255,255,0.02);
+  backdrop-filter: blur(8px) saturate(120%);
+  color:#e8f6f2;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Neon ring around avatar */
+.profile-img{
+  width:120px;height:120px;border-radius:50%;object-fit:cover;border:6px solid rgba(12,220,200,0.12);
+  box-shadow:0 0 30px rgba(6,200,180,0.12), 0 6px 18px rgba(0,0,0,0.6);
+  display:block;margin:0 auto;transform:translateY(-36px);
+}
+
+h1{
+  margin-top:-10px;font-size:24px;letter-spacing:1px;font-weight:700;
+  text-shadow:0 6px 26px rgba(0,200,180,0.08);
+}
+
+.subs{color:rgba(255,255,255,0.72);margin-top:6px;margin-bottom:12px}
+
+.features{list-style:none;text-align:left;max-width:320px;margin:12px auto 18px;padding-left:0}
+.features li{
+  margin:10px 0;padding-left:42px;position:relative;font-size:15px;color:#dff7f2;
+}
+.features li::before{
+  content:'\2714'; /* checkmark */
+  position:absolute;left:0;top:0;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#1f9a5a,#23c07a);color:#04210a;font-weight:700;box-shadow:0 6px 18px rgba(0,0,0,0.45);
+}
+
+.join-text{margin-top:6px;color:rgba(255,255,255,0.7);font-size:14px}
+
+#joinBtn{
+  margin-top:14px;background:linear-gradient(90deg,#1fa3e2,#0b78c6);border:none;padding:14px 34px;border-radius:36px;font-weight:700;color:white;font-size:16px;cursor:pointer;box-shadow:0 12px 30px rgba(11,120,198,0.28);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+#joinBtn:active{transform:translateY(2px)}
+#joinBtn:hover{transform:translateY(-4px);box-shadow:0 22px 40px rgba(11,120,198,0.36)}
+
+/* Glow trophy icons next to heading */
+h1::before, h1::after{content:'🏆';margin:0 8px;text-shadow:0 8px 22px rgba(250,200,20,0.12)}
+
+/* Rounded card lower shadow */
+.card:after{
+  content:'';position:absolute;left:0;right:0;bottom:-36px;height:120px;background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.6));pointer-events:none;
+}
+
+/* Mobile friendly */
+@media (max-width:420px){
+  .card{padding:22px}
+  .profile-img{width:108px;height:108px;transform:translateY(-28px)}
+  h1{font-size:20px}
+}
