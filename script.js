@@ -16,7 +16,7 @@ joinBtn.addEventListener('click', () => {
 });
 
 // Auto Redirect Timer (5 sec)
-let timeLeft = 5;
+let timeLeft = 15;
 const autoTimer = document.getElementById('autoTimer');
 
 function startAutoRedirect() {
@@ -45,3 +45,4 @@ window.addEventListener('load', () => {
     card.style.transform = 'translateY(0)';
   }, 80);
 });
+
